@@ -73,8 +73,8 @@ function TransformEnd(e) {
     audio.play()
   }
 const keys = Array.from(document.QuerySelectorAll('.key'));
-  keys.forEach(key => key.eventListener('transitionend',TransformEnd));
-  
+  keys.forEach(key => key.addeventListener('transitionend',TransformEnd));
+  window.addEventListener('keydown',playSound)
 </script>
 
 
