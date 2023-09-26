@@ -59,7 +59,11 @@
   <audio data-key="KeyL" src="sounds/tink.wav"></audio>
 
 <script>
-
+function TransformEnd(e) {
+  if(e.propertyName!='Transform') return;
+  e.classList.remove('playing')
+}
+  
 </script>
 
 
