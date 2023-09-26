@@ -63,7 +63,14 @@ function TransformEnd(e) {
   if(e.propertyName!='Transform') return;
   e.classList.remove('playing')
 }
-  
+  function playSound(e) {
+    const audio = document.QuerySelectorAll(audio.QuerySelector(data-key="${e.code}"));
+    const key = document.QuerySelectorAll(key.QuerySelector(data-key="${e.code}"));
+    if(!audio) return;
+    
+    key.classList.add('playing')
+    
+    audio.play()
 </script>
 
 
