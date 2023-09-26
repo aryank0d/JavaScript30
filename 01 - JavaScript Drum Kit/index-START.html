@@ -64,12 +64,12 @@ function TransformEnd(e) {
   e.classList.remove('playing')
 }
   function playSound(e) {
-    const audio = document.QuerySelector(audio[(data-key="${e.code}")];
-    const key = document.QuerySelector(div[(data-key="${e.code}")];
+    const audio = document.QuerySelector(`audio[(data-key="${e.code}")`];
+    const key = document.QuerySelector(`div[(data-key="${e.code}")`];
     if(!audio) return;
     
     key.classList.add('playing')
-    
+    audio.currentTime == 0;
     audio.play()
 </script>
 
