@@ -72,7 +72,8 @@ function TransformEnd(e) {
     audio.currentTime = 0;
     audio.play()
   }
-
+const keys = Array.from(document.QuerySelectorAll('.key'));
+  keys.forEach(key => key.eventListener('transitionend',TransformEnd));
   
 </script>
 
