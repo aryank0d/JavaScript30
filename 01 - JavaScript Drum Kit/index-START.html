@@ -60,20 +60,16 @@
 
 <script>
   window.addEventListener('keydown',function(event) {
-    const audio = document.querySelector(`audio[data-key="${event-code}"]`);
-    const key = document.querySelector(`div[data-key="${event-code}"]`);
+    const audio = document.QuerySelector(`audio[data-key="${event-code}"]`);
+    const key = document.QuerySelector(`div[data-key="${event-code}"]`);
     if(!audio) return;
     audio.currentTime = 0;
     audio.play();
-    key.classList.add('Playing');
-  });
-  function removeTransition(event){
-    if(event.propertyName !== 'transform') return;
-    this.classList.remove('Playing');
-  };
-  const keys = document.querySelectorAll('.key');
-  keys.forEach(key => key.addEventListener('transitionend',removeTransition));
-  window.addEventListener('keydown', playSound);
+    key.classList.addEvent('playing');
+
+    function removeTransition(event) 
+      {
+        if(
 </script>
 
 
