@@ -65,11 +65,16 @@
     if(!audio) return;
     audio.currentTime = 0;
     audio.play();
-    key.classList.addEvent('playing');
+    key.classList.add('playing');
 
     function removeTransition(event) 
       {
-        if(
+        if(event-PropertyName != 'transform')
+        return;
+        this.classList.remove('playing);
+      }
+    const keys = document.querySelectorAll(`.key`);
+    keys.forEach(key => key.addEventListener('transformend',removeTransition);
 </script>
 
 
